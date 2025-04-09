@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Es Par</title>
+</head>
+<body>
+  <button onclick="probarNumero()">Probar si es par</button>
+
+  <script>
+    function esPar(numero) {
+      return Number(numero) % 2 === 0;
+    }
+
+    function probarNumero() {
+      const numero = prompt("Ingresa un número:");
+      const resultado = esPar(numero);
+      alert("¿Es par?: " + resultado);
+    }
+  </script>
+</body>
+</html>
