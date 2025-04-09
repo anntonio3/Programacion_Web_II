@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Js Events</title>
+</head>
 
+<h1>Ejercicio de JS Object Display</h1>
+
+<body>
+	<h1 id="titulo">¡Hola, Antonio!</h1>
+	<button id="boton">Haz clic aquí</button>
+
+	<script>
+
+		let boton = document.getElementById("boton");
+		let titulo = document.getElementById("titulo");
+
+		boton.addEventListener("click", function() {
+			titulo.textContent = "¡El texto ha cambiado!";
+		});
+	</script>
+
+
+</body>
+</html>
