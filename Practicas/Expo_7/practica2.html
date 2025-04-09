@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Object Constructors</title>
+	<script>
+		function Vehiculo(marca, modelo, año) {
+		  this.marca = marca;
+		  this.modelo = modelo;
+		  this.año = año;
+		  this.mostrarDetalles = function() {
+		    return `Marca: ${this.marca}, Modelo: ${this.modelo}, Año: ${this.año}`;
+		  };
+		}
+
+
+		let carro1 = new Vehiculo("Nissan", "Tsuru", 2020);
+		let carro2 = new Vehiculo("Chevrolet", "Chevy", 2022);
+
+		console.log(carro1.mostrarDetalles());
+		console.log(carro2.mostrarDetalles());
+		
+	</script>
+</head>
+<body>
+
+	<h1>Ejercicio de JS Object Constructors</h1>
+
+</body>
+</html>
