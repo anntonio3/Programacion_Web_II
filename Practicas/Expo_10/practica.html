@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Estudiantes</title>
+</head>
+<body>
+  <h3>Lista de Estudiantes</h3>
+
+  <button onclick="mostrarLista()">Mostrar lista de estudiantes</button>
+  <p id="listaOriginal"></p>
+
+  <input type="text" id="nombreEstudiante" placeholder="Ingresa el nombre del estudiante">
+  <button onclick="buscarEstudiante()">Buscar estudiante</button>
+  <p id="mensajeBusqueda"></p>
+
+  <button onclick="ordenarLista()">Ordenar lista alfabéticamente</button>
+  <p id="listaOrdenada"></p>
+
+  <script>
+    let estudiantes = ["Vianey", "valentino", "Francisco", "Antonio", "estudiante5"];
+
+    // Función para mostrar la lista de estudiantes
+    function mostrarLista() {
+      document.getElementById("listaOriginal").textContent = "Lista original: " + estudiantes.join(", ");
+    }
+
+    function buscarEstudiante() {
+      let nombreBuscado = document.getElementById("nombreEstudiante").value;
+      if (estudiantes.includes(nombreBuscado)) {
+        document.getElementById("mensajeBusqueda").textContent = "El estudiante está en la lista.";
+      } else {
+        document.getElementById("mensajeBusqueda").textContent = "El estudiante no está en la lista.";
+      }
+    }
+
+    function ordenarLista() {
+      estudiantes.sort();
+      document.getElementById("listaOrdenada").textContent = "Lista ordenada: " + estudiantes.join(", ");
+    }
+  </script>
+</body>
+</html>
