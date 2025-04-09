@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Object Display</title>
+
+	<script >
+		let persona = {
+		  nombre: "Antonio",
+		  edad: 22,
+		  ocupacion: "Desarrollador",
+		  mostrarInfo: function() {
+		    return `Nombre: ${this.nombre}, Edad: ${this.edad}, Ocupación: ${this.ocupacion}`;
+		  }
+		};
+
+		console.log(persona.mostrarInfo());
+
+		document.body.innerHTML = persona.mostrarInfo();
+		
+	</script>
+</head>
+<body>
+	<h1>Ejercicio de JS Object Display</h1>
+</body>
+</html>
