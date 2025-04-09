@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Función de Nombre</title>
+</head>
+<body>
+  <h3>Ingresa tu nombre</h3>
+  <input type="text" id="nombreInput" placeholder="Escribe tu nombre">
+  <button onclick="procesarNombre()">Procesar nombre</button>
+  <p id="resultado"></p>
+
+  <script>
+    function procesarNombre() {
+      const nombre = document.getElementById('nombreInput').value;
+
+      const mensaje = saludoPersonalizado(nombre);
+
+      document.getElementById('resultado').textContent = mensaje;
+    }
+
+    function saludoPersonalizado(nombre) {
+
+      const nombreMayusculas = nombre.toUpperCase();
+
+      const contieneE = nombreMayusculas.includes('E');
+
+      const primeraLetra = nombre.charAt(0).toUpperCase();
+
+      return `HOLA, ${nombreMayusculas}. TU NOMBRE CONTIENE LA LETRA E: ${contieneE}. EMPIEZA CON: ${primeraLetra}`;
+    }
+  </script>
+</body>
+</html>
